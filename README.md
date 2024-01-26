@@ -8,8 +8,8 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 # Install
-git clone https://github.com/feri220899/ReactJs_Admin_Dashboard.git
-npm install
+- git clone https://github.com/feri220899/ReactJs_Admin_Dashboard.git
+- npm install
 
 # Runing 
-npm run dev
+- npm run dev
