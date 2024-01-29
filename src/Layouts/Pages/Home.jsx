@@ -1,20 +1,23 @@
-import React, { useState } from "react"
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 
 function Home() {
-    const [ data, setData ] = useState(false)
-    const handleClick = () => {
-        setData(!data)
-    };
-
+    
     return (
         <div>
-           <h1 className="text-4xl"> Hello Wolrd = {data ? 1 : 0} <br /></h1>
-            <button onClick={handleClick}
-                className="inline-block mt-4 cursor-pointer rounded-md bg-gray-800 px-4 py-3 text-center text-sm font-semibold text-white transition duration-200 ease-in-out hover:bg-gray-900">
-                Test useState
-            </button>
+            <div className="flex flex-col w-full">
+                <div className="gridcard bg-white rounded-sm place-items-center">
+                    <div class="container mx-auto p-5">
+                        <h1>Data</h1>
+                        <div className="overflow-x-auto">
+                           
+                        </div>
+
+                    </div>
+                </div>
+            </div>
         </div>
-    )
+    );
 }
 
-export default Home
+export default Home;

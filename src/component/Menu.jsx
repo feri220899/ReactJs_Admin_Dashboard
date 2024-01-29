@@ -6,9 +6,9 @@ function Menu({ expanded }) {
         { to: "/app/home", icon: <FaHome />, label: "Home" },
         { to: "/app/about", icon: <FaFilter />, label: "About" },
     ];
-
     return (
         <div>
+            {/* MENU SIDEBAR */}
             {menuItems.map((menuItem, index) => (
                 <li key={index}>
                     <NavLink

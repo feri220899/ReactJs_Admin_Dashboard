@@ -12,10 +12,10 @@ function Layout() {
     const [ expanded, setExpanded ] = useState(true);
     return (
         <div>
-            <div className="drawer lg:drawer-open">
-                <div className="drawer-content flex flex-col ">
+            <div className="drawer lg:drawer-open fixed">
+                <div className="drawer-content flex flex-col h-screen">
                     {/* Header */}
-                    <div className=" navbar bg-base-100 shadow-xl">
+                    <div className="navbar bg-base-100 shadow-xl z-7 rounded">
                         <div className="flex-1">
                             <a className="btn btn-ghost text-xl">daisyUI</a>
                         </div>
@@ -60,8 +60,8 @@ function Layout() {
                     </div>
                     {/* / Header */}
 
-                    {/* Main */}
-                    <main className="flex-1 overflow-y-auto md:pt-4 pt-4 px-6  bg-base-200">
+                    {/* Main Or Routing */}
+                    <main className="flex-1 md:pt-4 pt-4 px-6 overflow-y-auto bg-base-200">
                         <Suspense fallback={<div>Loading...</div>}>
                             <Routes>
                                 <Route path="/home" element={<Home />} />
@@ -76,7 +76,7 @@ function Layout() {
 
                 {/* LEFT */}
                 <div>
-                    <aside className="h-screen">
+                    <aside className="h-screen flex-1">
                         <nav className="h-full flex flex-col bg-slate-800 border-r shadow-sm">
                             <div
                                 className={`${expanded ? "md:p-4 p-1 md:justify-between justify-center" : "p-1 justify-center"
@@ -91,7 +91,7 @@ function Layout() {
                                     onClick={() => setExpanded((curr) => !curr)}
                                     className={`p-2 ${expanded ? "font-bold" : "text-slate-800"
                                         }  rounded-sm  bg-gradient-to-tr hover:bg-slate-400 `}>
-                                     <FaGripLines />
+                                    <FaGripLines />
                                 </button>
                             </div>
                             <hr className="mx-3 my-2" />
@@ -123,8 +123,13 @@ function Layout() {
                 </div>
                 {/* /LEFT */}
             </div>
+            
         </div>
+
+
+
     );
 }
 
 export default Layout;
+
